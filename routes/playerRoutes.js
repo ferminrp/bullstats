@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const homeController = require('../controllers/homeController');
+const playerController = require('../controllers/playerController');
 
-router.get('', homeController.home);
+router.get('/', playerController.index);
+
+router.get('/:id', playerController.player);
 
 module.exports = router;
