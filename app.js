@@ -4,6 +4,7 @@ const app = express();
 const teamRoutes = require('./routes/teamRoutes');
 const playerRoutes = require('./routes/playerRoutes');
 const indexRoutes = require('./routes/indexRoutes');
+const leagueRoutes = require('./routes/leagueRoutes');
 
 const port = process.env.PORT;
 
@@ -22,6 +23,6 @@ app.set('view engine', 'ejs');
 app.use('/', indexRoutes);
 app.use('/players', playerRoutes);
 app.use('/teams', teamRoutes);
-
+app.use('/leagues', leagueRoutes);
 
 app.listen(port || 3000, () => console.log('Servidor escuchando en puerto 3000'));
