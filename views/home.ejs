@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,24 @@
     <title>Bullstats | Toda la información de basket latinoamericano</title>
 
     <%- include('./partials/head') %>
-    
+        <link rel="stylesheet" href="/style/home.css">
 </head>
+
 <body>
     <%- include('./partials/header') %>
-    <main>
-        <h1 class="font-size-sm font-color-black align-center">¿Qué liga te interesa?</h1>
-    </main>
+        <main>
+            <h1 class="font-size-sm font-color-black align-center">¿Qué liga te interesa?</h1>
+            <a href="">
+                <article>
+                    <div class="league-logo" id="logo-arg"></div>
+                    <h4>Liga Argentina</h4>
+                </article>
+                <article>
+                    <div class="league-logo" id="logo-arg"></div>
+                    <h4>Liga Uruguaya</h4>
+                </article>
+            </a>
+        </main>
 </body>
+
 </html>
