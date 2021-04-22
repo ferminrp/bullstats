@@ -2,10 +2,44 @@
     --main-bg-color: #FAFAFA;
     --main-accent-color: #EA4C89;
     --main-black-color: #242424;
+    font-family: 'Inter', sans-serif;
+    --font-size-medium: 1.563rem;
   }
+
+:root * {
+    margin: 0px;
+}
 
 body {
     margin: 0px;
     background-color: var(--main-bg-color);
     color: var(--main-black-color);
+}
+
+header {
+    padding: 20px;
+}
+
+.font-size-me {
+    font-size: var(--font-size-medium);
+}
+
+.font-accent-color {
+    color: var(--main-accent-color);
+}
+
+.font-weight-black {
+    font-weight: 900;
+}
+
+.font-color-black {
+    color: var(--main-black-color);
+}
+
+.font-size-sm {
+    font-size: 1.25rem;
+}
+
+.align-center {
+    text-align: center;
 }
