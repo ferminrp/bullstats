@@ -42,6 +42,7 @@ main article {
     box-shadow: 0px 12px 16px rgba(156, 154, 154, 0.35);
     border-radius: 10px;
     margin-bottom: 20px;
+    transition: transform 500ms, border 500ms;
 }
 
 body main h1 {
@@ -57,4 +58,9 @@ h3, h4 { margin: 0px;}
 h4 {
     font-size: var(--font-size-sm);
     font-weight: 600;
+}
+
+article:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--main-accent-color);
 }
