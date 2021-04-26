@@ -8,7 +8,7 @@
 }
 
 #logo-arg {
-    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/9/95/La_Liga_Argentina_de_B%C3%A1squet_logo.svg/1200px-La_Liga_Argentina_de_B%C3%A1squet_logo.svg.png');
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/LNB_Argentina_Logo.svg/1200px-LNB_Argentina_Logo.svg.png');
 }
 
 body main {
@@ -63,4 +63,17 @@ h4 {
 article:hover {
     transform: scale(1.1);
     border: 1px solid var(--main-accent-color);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+.card-text p {
+    margin: 0px;
+    margin-top: 6px;
+    color: var(--main-accent-color);
+    font-weight: 600;
 }
