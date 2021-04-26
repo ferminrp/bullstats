@@ -5,7 +5,8 @@ Una página para mostrar estadísticas de equipos, jugadores y partidos de las l
 
 ## Colaboradores
 
-- [@katherinepeterson](https://www.github.com/ferminrp) por desarrollo y diseño.
+- [@ferminrp](https://www.github.com/ferminrp) por desarrollo y diseño.
+- [@sbuzzalino](https://www.github.com/sbuzzalino) por Data Science & Research
 
   
 ## Roadmap
