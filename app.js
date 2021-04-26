@@ -25,4 +25,8 @@ app.use('/players', playerRoutes);
 app.use('/teams', teamRoutes);
 app.use('/leagues', leagueRoutes);
 
+app.use((req, res, next) => {
+    res.status(404).render("home");
+});
+
 app.listen(port || 3000, () => console.log('Servidor escuchando en puerto 3000'));

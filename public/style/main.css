@@ -3,7 +3,9 @@
     --main-accent-color: #EA4C89;
     --main-black-color: #242424;
     font-family: 'Inter', sans-serif;
-    --font-size-medium: 1.563rem;
+    --font-size-m: 1.563rem;
+    --font-size-s: 1.25rem;
+    --font-size-xs: 1rem;
   }
 
 a {
@@ -22,7 +24,7 @@ header {
 }
 
 .font-size-me {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-m);
 }
 
 .font-accent-color {
@@ -43,4 +45,12 @@ header {
 
 .align-center {
     text-align: center;
+}
+
+header {
+    display: flex;
+}
+
+header img {
+    margin-right: 10px;
 }

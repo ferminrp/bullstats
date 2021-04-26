@@ -1,0 +1,30 @@
+h3, h4 { margin: 0px;}
+
+body main {
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 720px;
+}
+
+h1 {
+    font-size: var(--font-size-s);
+    font-weight: 800;
+}
+
+.conference-picker {
+    display: flex;
+    justify-content: space-between;
+    max-width: 340px
+}
+
+.conference-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.conference-img {
+    max-width: 100px;
+}
