@@ -15,7 +15,7 @@ h1 {
 
 .conference-picker {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 340px
 }
 
@@ -23,6 +23,10 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 10px;
     padding: 25px;
+}
+
+.conference-card {
+    margin-right: 10px;
 }
 
 .conference-img {
