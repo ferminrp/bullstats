@@ -26,7 +26,13 @@ app.use('/teams', teamRoutes);
 app.use('/leagues', leagueRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).render("home");
+    res.status(404).render("ftu",{
+        titulo: "¡Oops!",
+        thumbnail: "/images/thumbnails/404.svg",
+        parrafo: "Perdon, la pagina que buscabas no existe",
+        boton: "Elegir una Liga",
+        link: "/"
+    });
 });
 
 app.listen(port || 3000, () => console.log('Servidor escuchando en puerto 3000'));
