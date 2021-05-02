@@ -22,7 +22,7 @@ img {
     margin-bottom: 30px;
 }
 
-a {
+main a {
     margin-top: 30px;
     background-color: var(--main-accent-color);
     color: white;

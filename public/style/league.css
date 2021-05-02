@@ -60,3 +60,66 @@ th {
     background-color: #EA4C89;
 }
 
+.teams-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.equipo-link {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.equipo-card {
+    display: flex;
+    line-height: 50px;
+}
+
+.equipo-name {
+    margin:0px;
+}
+
+.equipo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .equipo-link {
+        width: 45%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .equipo-link {
+        width: 30%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .equipo-link {
+        width: 20%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .equipo-link {
+        width: 20%;
+    }
+}
+

@@ -1,8 +1,14 @@
 module.exports = {
     index: (req, res) => {
-        res.send('Este es el listado de teams!')
+        res.redirect('/')
     },
     team: (req, res) => { 
-        res.send('Este es el team ' + req.params.id)
+        res.render("ftu",{
+            titulo: "¡Oops!",
+            thumbnail: "/images/thumbnails/basketball-player.svg",
+            parrafo: "Todavia estamos construyendo esta página. Te Esperamos dentro de poco.",
+            boton: "Elegir una Liga",
+            link: "/"
+        });
     }
 };
