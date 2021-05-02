@@ -2,59 +2,78 @@ const pathname = window.location.pathname.split("/")
 const league = pathname[pathname.length - 1]
 console.log(league)
 
-var standings_url;
+var url;
+var division;
 
-
-switch(league) {
+switch (league) {
     case 'liga-argentina':
-        var standings_url = "https://bullstats-default-rtdb.firebaseio.com/tables/LARG/standings/LEAGUE.json";
+        var url = "https://bullstats-default-rtdb.firebaseio.com/tables/LARG.json";
+        var division = "LEAGUE"
         break;
 }
 
-console.log(standings_url)
+function sectionBuilder(data) {
+    console.log(data);
+    // defino el main y creo dentro un section
+    var main = document.getElementById('app');
+    var section = document.createElement('section');
+    // Llamo a la funcion que crea headers y mando a hacer uno y lo appendeo al section
+    section.appendChild(headerBuilder(data.name));
+    // creo la tabla dentro de un componente responsive
 
-fetch(standings_url)
-.then((resp) => resp.json())
-.then(function(data) {
+    var responsive_div = document.createElement('div');
+    responsive_div.style["overflow-x"] = "auto";
+    section.appendChild(responsive_div);
+    var table = document.createElement('table');
+    responsive_div.appendChild(table);
 
-    // selecciono la tabla
-    var standings_table = document.getElementById('standings-table');
+    // creo las columns
+    var columns_row = document.createElement('tr');
+    for (column in data.data.columns) {
+        var column_data = data.data.columns[column];
+        var node = document.createElement('th');
+        var node_text = document.createTextNode(column_data)
+        node.appendChild(node_text);
+        columns_row.appendChild(node);
+    }
+    table.appendChild(columns_row);
 
-    //extraigo del json las columnas
-    let columns = data.data.columns;
-    console.log(columns)
+    // Creo el resto de las rows
 
-    var table_header = document.createElement("tr");
-    standings_table.appendChild(table_header);
-
-    for (const column in columns) {
-        console.log(columns[column])
-        var node = document.createElement("th");
-        var textnode = document.createTextNode(columns[column])
-        node.appendChild(textnode);
-        table_header.appendChild(node);
+    for(row in data.data.data) {
+        var row = data.data.data[row];
+        rowBuilder(row);
+        table.appendChild(rowBuilder(row));
     }
 
-    const standings_data = data.data.data
+    // meto el section que estuve creando dentro del main
+    main.appendChild(section);
+}
 
-    for (row in standings_data) {
-        let row_data = standings_data[row];
-        console.log(row_data);
-        let table_row = document.createElement("tr");
-        standings_table.appendChild(table_row);
+function rowBuilder(row) {
+    var row_node = document.createElement('tr');
+    for (concept in row) {
+        var cell = document.createElement('td');
+        var cell_text = document.createTextNode(row[concept])
+        cell.appendChild(cell_text);
+        row_node.appendChild(cell);
+    }
+    return row_node
+}
 
-        for(datapoint in row_data) {
-            var node = document.createElement("td");
-            var textnode = document.createTextNode(row_data[datapoint])
-            node.appendChild(textnode);
-            table_row.appendChild(node);
+function headerBuilder(name) {
+    var heading_node = document.createElement('h3');
+    var heading_text = document.createTextNode(name)
+    heading_node.appendChild(heading_text);
+    return heading_node
+}
+
+fetch(url).then((resp) => resp.json()).then(function (data) {
+    for(data_section in data) {
+        if (typeof data[data_section][division] !== "undefined") {
+            sectionBuilder(data[data_section][division]);
         }
-
     }
-
-
-
-})
-.catch(function(error) {
-  console.log(error);
+}).catch(function (error) {
+    console.log(error);
 });

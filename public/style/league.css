@@ -8,6 +8,7 @@ body main {
     margin-right: auto;
     margin-top: 50px;
     max-width: 720px;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -58,3 +59,4 @@ tr:nth-child(odd) {
 th {
     background-color: #EA4C89;
 }
+
