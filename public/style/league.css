@@ -41,7 +41,8 @@ section h3 {
 }
 
 table, th, td {
-    border: 0px;
+    border:none;
+    border-collapse: collapse;
     min-width: 50px;
     text-align: center;
 }
