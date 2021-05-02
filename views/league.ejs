@@ -10,12 +10,13 @@
     </title>
 
     <%- include('./partials/head') %>
+        <script src="https://unpkg.com/vue@next"></script>
         <link rel="stylesheet" href="/style/league.css">
 </head>
 
 <body>
     <%- include('./partials/league-header') %>
-        <main>
+        <main id="app">
             <h1 class="">
                 <%= liga %>
             </h1>
@@ -30,7 +31,16 @@
                     </div>
                 </a>
             </section>
+            <section class="stangings">
+                <h3>Standings</h3>
+                <div style="overflow-x:auto;">
+                    <table id="standings-table">
+
+                    </table>
+                </div>
+            </section>
         </main>
+        <script src="/scripts/league.js"></script>
 </body>
 
 </html>

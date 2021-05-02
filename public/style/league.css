@@ -1,4 +1,6 @@
-h3, h4 { margin: 0px;}
+h3, h4 { 
+    margin: 0px;
+}
 
 body main {
     width: 90vw;
@@ -31,4 +33,27 @@ h1 {
 
 .conference-img {
     max-width: 100px;
+}
+
+section h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 0px;
+    min-width: 50px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+  }
+
+tr:nth-child(odd) {
+    background-color: #EA4C8930;
+}
+
+th {
+    background-color: #EA4C89;
 }
