@@ -10,6 +10,14 @@ switch (league) {
         var url = "https://bullstats-default-rtdb.firebaseio.com/tables/LARG.json";
         var division = "LEAGUE"
         break;
+    case 'liga-argentina-conferencia-norte':
+        var url = "https://bullstats-default-rtdb.firebaseio.com/tables/LARG.json";
+        var division = "NORTE"
+        break;
+    case 'liga-argentina-conferencia-sur':
+        var url = "https://bullstats-default-rtdb.firebaseio.com/tables/LARG.json";
+        var division = "SUR"
+        break;
 }
 
 function sectionBuilder(data) {
@@ -73,7 +81,39 @@ fetch(url).then((resp) => resp.json()).then(function (data) {
         if (typeof data[data_section][division] !== "undefined") {
             sectionBuilder(data[data_section][division]);
         }
-    }
+    };
 }).catch(function (error) {
     console.log(error);
 });
+
+switch (division) {
+    case 'NORTE':
+        var elements = document.getElementsByClassName('conference-card');
+        var requiredElement = elements[0];
+        requiredElement.style.opacity = "50%";
+
+
+        var links = document.getElementsByClassName('conference-link');
+
+        links[0].href = "/leagues/liga-argentina-conferencia-sur";
+        links[1].href = "/leagues/liga-argentina"
+
+        break;
+
+    case 'SUR':
+        var elements = document.getElementsByClassName('conference-card');
+        var requiredElement = elements[1];
+        requiredElement.style.opacity = "50%";
+
+        var links = document.getElementsByClassName('conference-link');
+
+        links[0].href = "/leagues/liga-argentina";
+        links[1].href = "/leagues/liga-argentina-conferencia-norte"
+
+        break;
+
+    default:
+        var elements = document.getElementsByClassName('conference-card');
+        elements[0].style.opacity = "50%";
+        elements[1].style.opacity = "50%";
+}
