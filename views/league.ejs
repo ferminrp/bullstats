@@ -6,8 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= liga %> de Basquet | Estadísticas y Equípos
+       <%= liga %> | Estadísticas y Equípos
     </title>
+
+    <meta name="description" content="Estadisticas actualizadas y detalladas de la<%= liga %>. Standings, Opponents, Teams y más.">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="<%= liga %> | Estadísticas y Equípos ">
+    <meta itemprop="description" content="Estadisticas actualizadas y detalladas de la<%= liga %>. Standings, Opponents, Teams y más.">
+    <meta itemprop="image" content="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/La_Liga_Argentina_de_B%C3%A1squet_logo.svg/1200px-La_Liga_Argentina_de_B%C3%A1squet_logo.svg.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://bullstats.ar/leagues/liga-argentina">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= liga %> | Estadísticas y Equípos ">
+    <meta property="og:description" content="Estadisticas actualizadas y detalladas de la<%= liga %>. Standings, Opponents, Teams y más.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/La_Liga_Argentina_de_B%C3%A1squet_logo.svg/1200px-La_Liga_Argentina_de_B%C3%A1squet_logo.svg.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= liga %> | Estadísticas y Equípos ">
+    <meta name="twitter:description" content="Estadisticas actualizadas y detalladas de la<%= liga %>. Standings, Opponents, Teams y más.">
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/La_Liga_Argentina_de_B%C3%A1squet_logo.svg/1200px-La_Liga_Argentina_de_B%C3%A1squet_logo.svg.png">
 
     <%- include('./partials/head') %>
         <script src="https://unpkg.com/vue@next"></script>
@@ -18,7 +38,7 @@
     <%- include('./partials/league-header') %>
         <main id="app">
             <h1 class="">
-                <%= liga %>
+               <%= liga %>
             </h1>
             <section class="conference-picker">
                 <a class="conference-link" href="/leagues/liga-argentina-conferencia-sur">
