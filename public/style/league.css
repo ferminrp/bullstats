@@ -48,6 +48,11 @@ table, th, td {
     text-align: center;
 }
 
+tr {
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+
 tr:nth-child(even) {
     background-color: white;
   }
