@@ -92,8 +92,7 @@ function teamSection(data) {
 
     section.appendChild(teams_grid);
 
-
-    var equipos = data.standings[division].data.data;
+    var equipos = data[0][division].data.data;
 
     for (row in equipos) {
         var equipo = equipos[row];
