@@ -9,14 +9,49 @@ Una página para mostrar estadísticas de equipos, jugadores y partidos de las l
 - [@sbuzzalino](https://www.github.com/sbuzzalino) por Data Science & Research
 
   
-## Roadmap
+# Roadmap
 
-- Páginas de Ligas
+### Version 0.0.2
 
-- Páginas de Equipos
+- [ ] Teams Page
+	- [ ] Diseño
+	- [ ] Maquetacion
+	- [ ] Renderizacion de data
+- [ ] Players Page
+	- [ ] Diseño
+	- [ ] Maquetacion
+	- [ ] Renderizacion de data
+- [ ] Leagues Page (Liga Argentina)
+    - Fixed columns en las tablas
+    - Loguito del equipo en las tablas
+    - Footer que apunta a la cuenta de twitter
 
-- Páginas de Jugadores
+### Version 0.0.1
+- [x] Dominio
+	- [x] Comprar dominio
+	- [x] Apuntar el dominio al Heroku
+- [x] Levantar el server en Heroku
+- [x] Crear el repo
+- [x] Instalar dependencias
+- [x] Crear modelo ruta controlador
+- [x] Arquitectura de la información
+- [x] Home Page
+	- [x] Diseño
+	- [x] Maquetacion
+- [x] Leagues Page (Liga Argentina)
+	- [x] Diseño
+	- [x] Maquetación
+	- [x] Renderización de data
+	- [x] Meta Data
+- [x] Proximamente Page 
+	- [x] Diseño
+	- [x] Maquetacion
 
-- Páginas de Partidos
+
+
+### Backlog
+
+- [ ] Progressive Web App
+- [ ] Meta data variable
 
   
