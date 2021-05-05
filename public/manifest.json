@@ -1,0 +1,38 @@
+{
+    "short_name": "Bullstats",
+    "name": "Bullstats: Estadísticas de Basket",
+    "icons": [
+      {
+        "src": "/images/192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#FAFAFA",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#EA4C89",
+    "prefer_related_applications" : false,
+    "shortcuts": [
+
+    ],
+    "description": "Estadísticas de Basket",
+    "screenshots": [
+      {
+        "src": "/images/screenshot1.png",
+        "type": "image/png",
+        "sizes": "540x720"
+      },
+      {
+        "src": "/images/screenshot2.jpg",
+        "type": "image/jpg",
+        "sizes": "540x720"
+      }
+    ]
+  }
