@@ -1,6 +1,6 @@
 const pathname = window.location.pathname.split("/")
 const league = pathname[pathname.length - 1]
-console.log(league)
+
 
 var url;
 var division;
@@ -21,7 +21,6 @@ switch (league) {
 }
 
 function sectionBuilder(data) {
-    console.log(data);
     // defino el main y creo dentro un section
     var main = document.getElementById('app');
     var section = document.createElement('section');
@@ -67,18 +66,18 @@ function rowBuilder(row) {
     var row_node = document.createElement('tr');
     for (concept in row) {
         var cell = document.createElement('td');
-        var cell_text = document.createTextNode(row[concept])
-        cell.appendChild(cell_text);
+        var cellText = document.createTextNode(row[concept])
+        cell.appendChild(cellText);
         row_node.appendChild(cell);
     }
     return row_node
 }
 
 function headerBuilder(name) {
-    var heading_node = document.createElement('h3');
-    var heading_text = document.createTextNode(name)
-    heading_node.appendChild(heading_text);
-    return heading_node
+    var headingNode = document.createElement('h3');
+    var headingText = document.createTextNode(name)
+    headingNode.appendChild(headingText);
+    return headingNode
 }
 
 function teamSection(data) {
@@ -87,49 +86,48 @@ function teamSection(data) {
     var section = document.createElement('section');
     section.appendChild(headerBuilder("Teams"));
 
-    var teams_grid = document.createElement('div');
-    teams_grid.className = "teams-grid";
+    var teamsGrid = document.createElement('div');
+    teamsGrid.className = "teams-grid";
 
-    section.appendChild(teams_grid);
+    section.appendChild(teamsGrid);
 
     var equipos = data[0][division].data.data;
 
     for (row in equipos) {
         var equipo = equipos[row];
-        teams_grid.appendChild(equipoCardBuilder(equipo));
+        teamsGrid.appendChild(equipoCardBuilder(equipo));
     }
 
     main.appendChild(section);
 }
 
 function equipoCardBuilder(equipoData) {
-    var equipo_name = equipoData[1];
-    var equipo_abbreviation = equipoData[2];
-    console.log(equipo_name);
+    var equipoName = equipoData[1];
+    var equipoAbbreviation = equipoData[2];
 
     // Creo la card container de el logo
-    var equipo_link = document.createElement('a');
-    equipo_link.className = "equipo-link"
-    equipo_link.href = "/teams/"+equipo_abbreviation
+    var equipoLink = document.createElement('a');
+    equipoLink.className = "equipo-link"
+    equipoLink.href = "/teams/"+equipoAbbreviation
 
-    var equipo_card = document.createElement('div');
-    equipo_card.className  = "equipo-card";
+    var equipoCard = document.createElement('div');
+    equipoCard.className  = "equipo-card";
 
     // le meto la imagen a la card
     var equipo_img = document.createElement('img');
-    equipo_img.src = "/images/logos/equipos/" + equipo_abbreviation + ".png"
+    equipo_img.src = "/images/logos/equipos/" + equipoAbbreviation + ".png"
     equipo_img.className = "equipo-img"
     equipo_img.loading = "lazy"
-    equipo_card.appendChild(equipo_img);
+    equipoCard.appendChild(equipo_img);
 
-    var equipo_name_node = document.createElement('p');
-    equipo_name_node.appendChild(document.createTextNode(equipo_name));
-    equipo_name_node.className = "equipo-name";
-    equipo_card.appendChild(equipo_name_node);
+    var equipoName_node = document.createElement('p');
+    equipoName_node.appendChild(document.createTextNode(equipoName));
+    equipoName_node.className = "equipo-name";
+    equipoCard.appendChild(equipoName_node);
 
-    equipo_link.appendChild(equipo_card);
+    equipoLink.appendChild(equipoCard);
 
-    return equipo_link;
+    return equipoLink;
 }
 
 fetch(url).then((resp) => resp.json()).then(function (data) {
