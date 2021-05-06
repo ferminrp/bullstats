@@ -1,6 +1,6 @@
 const pathname = window.location.pathname.split("/")
 const league = pathname[pathname.length - 1]
-console.log(league)
+
 
 var url;
 var division;
@@ -21,7 +21,6 @@ switch (league) {
 }
 
 function sectionBuilder(data) {
-    console.log(data);
     // defino el main y creo dentro un section
     var main = document.getElementById('app');
     var section = document.createElement('section');
@@ -105,7 +104,6 @@ function teamSection(data) {
 function equipoCardBuilder(equipoData) {
     var equipoName = equipoData[1];
     var equipoAbbreviation = equipoData[2];
-    console.log(equipoName);
 
     // Creo la card container de el logo
     var equipoLink = document.createElement('a');

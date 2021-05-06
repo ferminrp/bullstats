@@ -94,6 +94,25 @@ th {
     margin-right: 20px;
 }
 
+table th:first-child, table td:first-child {
+    position: sticky;
+    left: 0px;
+}
+
+table td:nth-child(2), table th:nth-child(2) {
+    position: sticky;
+    left: 52px;
+}
+
+table tr:nth-child(even) td {
+    background-color: white;
+  }
+
+table tr:nth-child(odd) td {
+background-color: #F7D9E5;
+}
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
