@@ -46,6 +46,7 @@ table, th, td {
     border-collapse: collapse;
     min-width: 50px;
     text-align: center;
+    white-space: nowrap;
 }
 
 tr {
