@@ -54,7 +54,11 @@ var leagueOperator = {
         for (column in data) {
             var column_data = data[column];
             var node = document.createElement('th');
-            var node_text = document.createTextNode(column_data)
+
+            /*  Delego en otra funcion chequear si esta es la columna code
+                Si es, me trae un texto vacio, sino el texto con la data */
+
+            var node_text = this.codeColumnChecker(column_data)
             node.appendChild(node_text);
             columns_row.appendChild(node);
         }
@@ -123,6 +127,10 @@ var leagueOperator = {
         equipoLink.appendChild(equipoCard);
 
         return equipoLink;
+    },
+    codeColumnChecker: function (columnName) {
+        /* Recibe el nombre de la columna, si es code la deja en blanco, sino le pone el nombre */
+        return ( columnName === "code" ? document.createTextNode("") : document.createTextNode(columnName) )
     }
 }
 
