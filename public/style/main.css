@@ -54,3 +54,19 @@ header {
 header img {
     margin-right: 10px;
 }
+
+footer {
+    max-width: 90vw;
+    margin: auto;
+    padding-bottom: 30px;;
+}
+
+footer a {
+    display: flex;
+    gap: 10px;
+    color: #767676
+}
+
+footer a img {
+    max-width: 30px;
+}
