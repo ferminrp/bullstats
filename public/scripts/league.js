@@ -137,6 +137,7 @@ var leagueOperator = {
             let img = document.createElement('img');
             img.src = "/images/logos/equipos/" + cellData + ".png"
             img.className = "small-logo"
+            img.loading = "lazy"
             cell.appendChild(img);
         } else {
             let cellText = document.createTextNode(cellData)
