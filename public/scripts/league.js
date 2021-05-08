@@ -67,10 +67,7 @@ var leagueOperator = {
     rowBuilder: function (row) {
         var row_node = document.createElement('tr');
         for (concept in row) {
-            var cell = document.createElement('td');
-            var cellText = document.createTextNode(row[concept])
-            cell.appendChild(cellText);
-            row_node.appendChild(cell);
+            row_node.appendChild(leagueOperator.cellBuilder(row[concept]));
         }
         return row_node
     },
@@ -131,6 +128,21 @@ var leagueOperator = {
     codeColumnChecker: function (columnName) {
         /* Recibe el nombre de la columna, si es code la deja en blanco, sino le pone el nombre */
         return ( columnName === "code" ? document.createTextNode("") : document.createTextNode(columnName) )
+    },
+    cellBuilder: function (cellData) {
+        let cell = document.createElement('td');
+        let regexToMatch = new RegExp('([A-Z]{3})');
+        let regexToExclude = new RegExp('([A-Z]{4})');
+        if (regexToMatch.test(cellData) && !regexToExclude.test(cellData)) {
+            let img = document.createElement('img');
+            img.src = "/images/logos/equipos/" + cellData + ".png"
+            img.className = "small-logo"
+            cell.appendChild(img);
+        } else {
+            let cellText = document.createTextNode(cellData)
+            cell.appendChild(cellText);
+        }
+        return(cell);
     }
 }
 
