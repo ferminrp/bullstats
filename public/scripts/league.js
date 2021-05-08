@@ -20,13 +20,13 @@ switch (league) {
         break;
 }
 
-var operator = {
+var leagueOperator = {
     sectionBuilder: function (data) {
         // defino el main y creo dentro un section
         var main = document.getElementById('app');
         var section = document.createElement('section');
         // Llamo a la funcion que crea headers y mando a hacer uno y lo appendeo al section
-        section.appendChild(operator.headerBuilder(data.name));
+        section.appendChild(leagueOperator.headerBuilder(data.name));
         // creo la tabla dentro de un componente responsive
 
         var responsive_div = document.createElement('div');
@@ -37,13 +37,13 @@ var operator = {
 
         // creo la row de columnas en una funcion aparte y la appendeo a la tabla
 
-        table.appendChild(operator.columnsBuilder(data.data.columns));
+        table.appendChild(leagueOperator.columnsBuilder(data.data.columns));
 
         // Creo el resto de las rows
 
         for (row in data.data.data) {
             var row = data.data.data[row];
-            table.appendChild(operator.rowBuilder(row));
+            table.appendChild(leagueOperator.rowBuilder(row));
         }
 
         // meto el section que estuve creando dentro del main
@@ -80,7 +80,7 @@ var operator = {
 
         var main = document.getElementById('app');
         var section = document.createElement('section');
-        section.appendChild(operator.headerBuilder("Teams"));
+        section.appendChild(leagueOperator.headerBuilder("Teams"));
 
         var teamsGrid = document.createElement('div');
         teamsGrid.className = "teams-grid";
@@ -133,12 +133,12 @@ fetch(url).then((resp) => resp.json()).then(function (data) {
     // En base a todas las secciones que hay en el json voy creando secciones de heading + tabla
     for (data_section in data) {
         if (typeof data[data_section][division] !== "undefined") {
-            operator.sectionBuilder(data[data_section][division]);
+            leagueOperator.sectionBuilder(data[data_section][division]);
         }
     };
 
     // Creo una seccion de teams enviandole los equipos que hay en esta pagina
-    operator.teamSection(data);
+    leagueOperator.teamSection(data);
 
 
 }).catch(function (error) {
