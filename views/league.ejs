@@ -36,23 +36,24 @@
 
 <body>
     <%- include('./partials/league-header') %>
-        <main id="app">
-            <h1 class="">
-               <%= liga %>
-            </h1>
-            <section class="conference-picker">
-                <a class="conference-link" href="/leagues/liga-argentina-conferencia-sur">
+    <main id="app">
+        <h1 class="">
+            <%= liga %>
+        </h1>
+        <section class="conference-picker">
+            <a class="conference-link" href="/leagues/liga-argentina-conferencia-sur">
+            <div class="conference-card">
+                <img src="/images/logos/conferencias/csur.svg" alt="" class="conference-img">
+            </div></a>
+            <a class="conference-link" href="/leagues/liga-argentina-conferencia-norte">
                 <div class="conference-card">
-                    <img src="/images/logos/conferencias/csur.svg" alt="" class="conference-img">
-                </div></a>
-                <a class="conference-link" href="/leagues/liga-argentina-conferencia-norte">
-                    <div class="conference-card">
-                        <img src="/images/logos/conferencias/cnorte.svg" alt="" class="conference-img">
-                    </div>
-                </a>
-            </section>
- 
-        </main>
+                    <img src="/images/logos/conferencias/cnorte.svg" alt="" class="conference-img">
+                </div>
+            </a>
+        </section>
+
+    </main>
+    <%- include('./partials/footer') %>
         <script src="/scripts/league.js"></script>
 </body>
 
