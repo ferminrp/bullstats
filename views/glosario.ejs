@@ -10,10 +10,10 @@
     <main id="glosario">
       <h1>Glosario</h1>
       <ul>
-        <% for (post of posts) { %>
+        <% for (post in posts) { %>
           <li>
-          <a href="/glosario/<%= post.slice(0, -3) %>">
-              ¿<%= post.slice(0, -3) %>?
+          <a href="/glosario/<%= posts[post].slice(0, -3) %>">
+            <%= titles[post]%>
           </a>
         </li>
         <% } %>
