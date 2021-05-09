@@ -1,19 +1,24 @@
 <html>
     <head>
         <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/style/glosario.css">
 
+        <title>Glosario</title>
     </head>
   <body>
     <%- include('./partials/header') %>
-    <div id="glosario">
-      <% for (post of posts) { %>
-        <a href="/glosario/<%= post.slice(0, -3) %>">
-          <h3 class="post">
-            ¿<%= post.slice(0, -3) %>?
-          </h3>
-        </a>
-      <% } %>
-    </div>
+    <main id="glosario">
+      <h1>Glosario</h1>
+      <ul>
+        <% for (post of posts) { %>
+          <li>
+          <a href="/glosario/<%= post.slice(0, -3) %>">
+              ¿<%= post.slice(0, -3) %>?
+          </a>
+        </li>
+        <% } %>
+      </ul>
+      </main>
     <%- include('./partials/footer') %>
   </body>
 </html>

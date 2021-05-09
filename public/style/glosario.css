@@ -1,0 +1,21 @@
+main {
+    width: 90vw;
+    max-width: 720px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 1.56rem;
+    font-weight: 800;
+}
+
+li a {
+    color: var(--main-accent-color);
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+}
+
+li::marker {
+    color: var(--main-accent-color)
+}
