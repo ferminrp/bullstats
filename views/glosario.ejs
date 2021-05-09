@@ -8,9 +8,9 @@
     <div id="glosario">
       <% for (post of posts) { %>
         <a href="/glosario/<%= post.slice(0, -3) %>">
-          <div class="post">
-            <%= post.toUpperCase() %>  
-          </div>
+          <h3 class="post">
+            ¿<%= post.slice(0, -3) %>?
+          </h3>
         </a>
       <% } %>
     </div>
