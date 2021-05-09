@@ -1,0 +1,14 @@
+main {
+    width: 90vw;
+    max-width: 720px;
+    margin: auto;
+}
+
+main a {
+    color: var(--main-accent-color);
+}
+
+main img {
+    width: 90vw;
+    max-width: 720px;
+}

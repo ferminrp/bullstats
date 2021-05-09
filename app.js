@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
 
+// gray-matter to read the .md files better
+const matter = require('gray-matter');
+
 const teamRoutes = require("./routes/teamRoutes");
 const playerRoutes = require("./routes/playerRoutes");
 const indexRoutes = require("./routes/indexRoutes");
 const leagueRoutes = require("./routes/leagueRoutes");
+const glosarioRoutes = require("./routes/glosarioRoutes");
 
 const port = process.env.PORT;
 
@@ -24,6 +28,9 @@ app.use("/", indexRoutes);
 app.use("/players", playerRoutes);
 app.use("/teams", teamRoutes);
 app.use("/leagues", leagueRoutes);
+app.use("/glosario", glosarioRoutes);
+
+
 
 app.use((req, res, next) => {
 	res.status(404).render(
