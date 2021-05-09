@@ -92,14 +92,14 @@ var leagueOperator = {
 
         for (row in equipos) {
             var equipo = equipos[row];
-            teamsGrid.appendChild(equipoCardBuilder(equipo));
+            teamsGrid.appendChild(leagueOperator.equipoCardBuilder(equipo));
         }
 
         main.appendChild(section);
     },
     equipoCardBuilder: function (equipoData) {
         var equipoName = equipoData[1];
-        var equipoAbbreviation = equipoData[2];
+        var equipoAbbreviation = equipoData[1];
 
         // Creo la card container de el logo
         var equipoLink = document.createElement('a');
