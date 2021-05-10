@@ -1,7 +1,7 @@
 
-# Bull Stats
+# [BullStats.ar](https://bullstats.ar)
 
-Una página para mostrar estadísticas de equipos, jugadores y partidos de las ligas de basquet de Argentina y Uruguay
+Bullstats es una página para mostrar estadísticas de equipos, jugadores y partidos de las ligas de basquet de Argentina y Uruguay.
 
 ## Colaboradores
 
@@ -21,10 +21,15 @@ Una página para mostrar estadísticas de equipos, jugadores y partidos de las l
 	- [ ] Diseño
 	- [ ] Maquetacion
 	- [ ] Renderizacion de data
-- [ ] Leagues Page (Liga Argentina)
-    - Fixed columns en las tablas
-    - Loguito del equipo en las tablas
-    - Footer que apunta a la cuenta de twitter
+- [x] Leagues Page (Liga Argentina)
+    - [x] Fixed columns en las tablas
+    - [x] Loguito del equipo en las tablas
+    - [x] Footer que apunta a la cuenta de twitter
+- [ ] Glosario
+	- [x] Página que liste todas las definiciones
+	- [x] Pagina de definicion
+	- [x] Motor de renderizacion de markdown y rutas en backend
+	- [ ] Escribir y explicar las distintas metricas.
 
 ### Version 0.0.1
 - [x] Dominio
@@ -46,12 +51,15 @@ Una página para mostrar estadísticas de equipos, jugadores y partidos de las l
 - [x] Proximamente Page 
 	- [x] Diseño
 	- [x] Maquetacion
+- [x] Página de error 404
+	- [x] Diseño
+	- [x] Maquetación
 
 
 
 ### Backlog
 
 - [ ] Progressive Web App
-- [ ] Meta data variable
+
 
   
