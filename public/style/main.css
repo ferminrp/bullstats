@@ -51,6 +51,10 @@ header {
     display: flex;
 }
 
+header h3 {
+    margin: 0px;
+}
+
 header img {
     margin-right: 10px;
 }

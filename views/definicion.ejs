@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/style/definicion.css">
+    </head>
+  <body>
+    <%- include('./partials/header') %>
+    <main>
+      <h1><%= title %></h1>
+      <%- post %>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
