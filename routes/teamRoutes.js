@@ -5,6 +5,6 @@ const teamController = require("../controllers/teamController");
 
 router.get("/", teamController.index);
 
-router.get("/:id", teamController.team);
+router.get("/:league/:teamId", teamController.team);
 
 module.exports = router;
