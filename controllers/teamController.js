@@ -1,17 +1,20 @@
+const fetch = require('node-fetch');
+
 module.exports = {
 	index: (req, res) => {
 		res.redirect("/");
 	},
 	team: (req, res) => {
-		res.render(
-			"ftu",
-			{
-				titulo: "\xa1Oops!",
-				thumbnail: "/images/thumbnails/basketball-player.svg",
-				parrafo: "Todavia estamos construyendo esta p\xe1gina. Te esperamos dentro de poco.",
-				boton: "Elegir una Liga",
-				link: "/",
-			},
-		);
+		let liga = req.params.league;
+		let teamId = req.params.teamId;
+
+		let url = "https://bullstats-default-rtdb.firebaseio.com/teams/" + liga +"/"+ teamId +".json";
+		console.log(url);
+		fetch(url)
+			.then(res => res.json())
+			.then(json => res.send(JSON.stringify(json)))
+			.catch(function(error) {
+				console.log(error);
+			  });
 	},
 };
